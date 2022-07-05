@@ -1,3 +1,8 @@
+#!bin/zsh
+
+local -A opthash
+zparseopts -D -A opthash -- b -help
+
 function gitusessh() {
     export git_root=$(git rev-parse --show-toplevel)
 
